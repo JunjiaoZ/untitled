@@ -39,7 +39,7 @@ class App extends React.Component<Props, State> {
             <div className={styles.app}>
                 <div className={styles.appHeader}>
                     <img src={logo} alt="logo" className={styles.appLogo}/>
-                    <h1>南无阿弥陀佛 南无观世音菩萨</h1>
+                    <h1>南无阿弥陀佛 南无观世音菩萨 南无地藏王菩萨</h1>
                 </div>
                 <button onClick={() => {
                     this.setState((preState, preProps)=>{return  {count: preState.count + 1}}, () => {
