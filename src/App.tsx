@@ -1,6 +1,6 @@
 import React from 'react';
 import logo from './assets/images/logo.svg';
-
+import RobotDiscount from "./components/robotDiscount";
 import Robot from "./components/robot";
 import styles from './App.module.css';
 import ShoppingCart from "./components/ShoppingCart";
@@ -57,7 +57,11 @@ class App extends React.Component<Props, State> {
                 <span>count: {this.state.count}</span>
                 <ShoppingCart></ShoppingCart>
                 <div className={styles.robotList}>
-                    {this.state.robotGallery.map(r => <Robot id={r.id} name={r.name} email={r.email}/>)}
+                    {this.state.robotGallery.map((r,index) =>
+                        index%2 == 0?
+                        (<RobotDiscount id={r.id} name={r.name} email={r.email}/>)
+                        :(<Robot id={r.id} name={r.name} email={r.email}/>)
+                        )}
                 </div>
             </div>
         );
